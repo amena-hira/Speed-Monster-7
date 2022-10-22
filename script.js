@@ -24,7 +24,10 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
+  
   if (newLetter == "Backspace") {
+    console.log(newLetter);
+    errorCount++;
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -36,6 +39,7 @@ const typeController = (e) => {
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
     return;
+    
   }
 
   userText += newLetter;
