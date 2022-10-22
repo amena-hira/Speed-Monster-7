@@ -52,6 +52,7 @@ const typeController = (e) => {
   if (questionText === userText) {
     gameOver();
   }
+  
 };
 
 const validate = (key) => {
@@ -110,10 +111,10 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
+    if (count == 0 ) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "none";
+      countdownOverlay.style.display = "none";  
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
